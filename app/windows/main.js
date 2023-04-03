@@ -10,7 +10,7 @@ let preloadFile;
 if (isDev) {
     preloadFile = path.join(__dirname, 'preload.js');
 } else {
-    preloadFile = path.join(electron.app.getAppPath(), 'build', 'app', 'preload.js');
+    preloadFile = path.join(electron.app.getAppPath(), 'app', 'windows', 'preload.js');
 }
 
 function getWindow() {

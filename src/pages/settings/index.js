@@ -4,7 +4,7 @@ import Logger from './components/logger.js';
 const Settings = (props) => {
   return (
     <div className="row">
-      <div class="col">
+      <div className="col">
         <Config/>
       </div>
       <div className="col">

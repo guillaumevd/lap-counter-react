@@ -62,6 +62,7 @@ const schema = {
 const store = new Store({
   defaults: defaultConfig,
   schema: schema,
+  isAsync: true, // Add this line to enable asynchronous mode
 });
 
 module.exports = {
