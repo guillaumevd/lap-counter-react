@@ -1,6 +1,6 @@
 {
   "name": "lap-counter",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Lap timing/counting application",
   "author": {
     "name": "Guillaume Vandriessche",
