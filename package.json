@@ -1,0 +1,62 @@
+{
+  "name": "lap-counter",
+  "version": "0.0.2",
+  "description": "Lap timing/counting application",
+  "author": {
+    "name": "Guillaume Vandriessche",
+    "email": "Guillaumevandriessche776@gmail.com"
+  },
+  "main": "app/app.js",
+  "homepage": "./",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guillaumevd/electronjs_streaming_client.git"
+  },
+  "scripts": {
+    "build": "rimraf build dist && yarn version --patch && react-scripts build && electron-builder",
+    "rebuild": "electron-rebuild",
+    "dev": "concurrently  \"wait-on tcp:127.0.0.1:3000 && cross-env NODE_ENV=dev electron --trace-warnings .\" \"cross-env BROWSER=none react-scripts start\""
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version"
+    ]
+  },
+  "dependencies": {
+    "@electron/remote": "1.0.2",
+    "bootstrap": "^5.2.3",
+    "electron-store": "^8.1.0",
+    "electron-updater": "^5.3.0",
+    "moment": "^2.29.4",
+    "serialport": "9.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/plugin-syntax-flow": "^7.14.5",
+    "@babel/plugin-transform-react-jsx": "^7.14.9",
+    "@popperjs/core": "^2.11.7",
+    "concurrently": "^8.0.1",
+    "cross-env": "^7.0.3",
+    "electron": "^23.2.1",
+    "electron-builder": "^23.6.0",
+    "electron-rebuild": "^3.2.9",
+    "framer-motion": "^10.10.0",
+    "graceful-fs": "^4.2.11",
+    "node-fetch": "^3.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-is": ">=16.8.0",
+    "react-router": "^6.10.0",
+    "react-router-dom": "^6.10.0",
+    "react-scripts": "^5.0.1",
+    "styled-components": "^5.3.9",
+    "typescript": "^5.0.3",
+    "wait-on": "5.2.1",
+    "web-vitals": "^3.3.0"
+  }
+}
