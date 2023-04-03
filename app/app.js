@@ -3,6 +3,7 @@ const { autoUpdater } = require('electron-updater')
 const Readline = require('@serialport/parser-readline');
 const SerialPort = require('serialport');
 
+
 //DISABLE UPDATER AUTO DOWNLOAD
 autoUpdater.autoDownload = false;
 

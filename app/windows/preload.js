@@ -1,5 +1,5 @@
 const { contextBridge, ipcRenderer } = require('electron');
-const { store } = require('../store');
+const { store } = require('../store.js');
 
 contextBridge.exposeInMainWorld('electron', {
   send: (channel, data) => {
