@@ -1,9 +1,17 @@
 const electron = require("electron");
 const path = require("path");
 const os = require("os");
+
 let mainWindow = undefined;
 
 const isDev = process.env.NODE_ENV === 'dev';
+
+let preloadFile;
+if (isDev) {
+    preloadFile = path.join(__dirname, 'preload.js');
+} else {
+    preloadFile = path.join(electron.app.getAppPath(), 'build', 'app', 'preload.js');
+}
 
 function getWindow() {
     return mainWindow;
@@ -27,7 +35,7 @@ function createWindow() {
         icon: path.join(electron.app.getAppPath(), 'build', 'assets', 'images', 'icon') + `.${os.platform() === "win32" ? "ico" : "png"}`,
         show: false,
         webPreferences: {
-            preload: path.join(__dirname, 'preload.js'),
+            preload: preloadFile,
             contextIsolation: true,
             nodeIntegration: true,
             enableRemoteModule: true
